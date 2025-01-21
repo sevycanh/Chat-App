@@ -1,6 +1,6 @@
 const express = require("express");
 const db = require("./config/database");
-// const route = require("./routes/api");
+const route = require("./routes/api");
 require("dotenv").config();
 
 //Connect to database
@@ -17,7 +17,7 @@ app.use(
 ); //res
 app.use(express.json()); //req
 
-// route(app);
+route(app);
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
